@@ -1,0 +1,47 @@
+<div class="sticky-sidebar">
+  <div class="right-sidebar">
+    <div class="sidebar-heading">Did you know?</div>
+
+    <ul class="sidebar-list">
+      {{ range .Site.Data.sidebar.qa }}
+      <li>{{.}}</li>
+      {{end}}
+      <li class="text-center">{{ .Site.Data.sidebar.credit }}</li>
+    </ul>
+  </div>
+
+  {{ range .Site.Data.rank.cards }}
+  <!---->
+  {{if .featured}}
+  <div class="right-sidebar logo">
+    <div class="sidebar-logo">
+      <img src="{{.logo}}" />
+    </div>
+    {{ with.button}}
+    <div class="sidebar-content text-center">
+      <h5 class="text-center my-2">High Success Rate</h5>
+      <a href="{{.link_mobi}}" class="btn btn-visitor d-md-none" target="_blank"
+        >Find Your Match</a
+      >
+
+      <a
+        href="{{.link_desktop}}"
+        class="btn btn-visitor d-none d-md-block"
+        target="_blank"
+        >Find Your Match</a
+      >
+    </div>
+    {{end}}
+  </div>
+  {{end}} {{end}}
+
+  <div class="right-sidebar">
+    <div class="sidebar-heading">{{ .Site.Data.sidebar.bottom.title }}</div>
+    <ul class="sidebar-list1">
+      {{ range $.Site.Data.sidebar.bottom.content }}
+      <li>{{.name}}<span>{{.count}}</span></li>
+      {{end}}
+      <li class="text-center">{{ .Site.Data.sidebar.bottom.credit }}</li>
+    </ul>
+  </div>
+</div>

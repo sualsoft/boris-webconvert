@@ -1,0 +1,36 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer-main">
+          <img src="{{site.Params.siteLogo}}" alt="logo" />
+          <p>{{site.Params.footer}}</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-6">
+        <ul class="footer-links">
+          {{- range site.Menus.footer_left }}
+          <li>
+            <a href="{{.URL}}" target="_blank">{{.Name}}</a>
+          </li>
+          {{end}}
+        </ul>
+      </div>
+      <div class="col-md-4 col-6">
+        <ul class="footer-links">
+          {{- range site.Menus.footer_right }}
+
+          <li>
+            <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+          </li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+    <div class="copyright d-flex justify-content-center">
+      made with <span>❤ </span>©
+      <div id="current-year2"></div>
+      . Best-Dating-Sites-Au.com All rights reserved.
+    </div>
+  </div>
+</footer>

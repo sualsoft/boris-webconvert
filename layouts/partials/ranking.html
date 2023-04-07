@@ -1,0 +1,83 @@
+<script>
+    const offers = require("offers");
+
+  let index = 1;
+  offers.toDisplay.forEach(offre => {
+    let top_offer;
+    if (index == 1) {
+      top_offer = offre;
+      document.write('<div class="cards p-4 first">');
+    } else {
+      document.write('<div class="cards p-4">');
+    }
+    document.write('<div class="row ">');
+
+    if (index == 1) {
+      document.write(`<div class="tag"><span>${index}</span>${offre.topvignette}</div>`);
+    } else {
+      document.write(`<div class="tag no-bg"><span>${index}</span></div>`);
+    }
+
+    document.write('<div class="col-md-3">');
+    document.write('<div class="card-left">');
+
+    document.write(`<div class="card-logo"><img src="images/${offre.img}" alt="${offre.name}" class="img-fluid express-logo">`);
+
+    if (index == 1) {
+      document.write('<div class="annoucement d-inline-block d-md-none off-in-mobile">');
+      document.write(`<a href="${offre.url}" target="_blank">3 Months Free</a>`);
+      document.write('</div>');
+    }
+
+    document.write('</div>');
+
+    if (index == 1) {
+      document.write('<div class="likes">');
+      document.write('<img src="images/binoculars.svg" alt="" class="img-fluid">  <span>Singles in your area!</span>');
+      document.write('</div>');
+    }
+
+    document.write('<div class="right-mb">');
+
+    if (index == 1) {
+      document.write('<div class="trophy trophy-mb">');
+      document.write('<span><img src="images/trophy.svg" alt="trophy" >9.9</span>');
+      document.write('</div>');
+    } else if (index == 2) {
+      document.write('<div class="trophy trophy-mb">');
+      document.write('<span> <img src="images/speed.svg" alt="trophy" class="score-icon">9.7</span>');
+      document.write('</div>');
+    } else if (index == 3) {
+      document.write('<div class="trophy trophy-mb">');
+      document.write('<span> <img src="images/speed.svg" alt="trophy" class="score-icon">9.5</span>');
+      document.write('</div>');
+    } else {
+      document.write('<div class="trophy trophy-mb">');
+      document.write('<span> <img src="images/speed.svg" alt="trophy" class="score-icon">9.4</span>');
+      document.write('</div>');
+    }
+
+    document.write(`<h6>${listWords[index - 1]}</h6>`);
+    document.write('</div>');
+
+    document.write('</div>');
+    document.write('</div>');
+
+    document.write('<div class="col-md-6 d-left">');
+    document.write('<div class="card-middle">');
+
+    if (index == 1) {
+      document.write(`<h6 class="top">${offre.topphrase}</h6>`);
+    } else {
+      document.write(`<h6>${offre.topphrase}</h6>`);
+    }
+
+    document.write('<ul class="feature-list mb-md-0">');
+
+    offre.arguments.forEach(k => {
+      document.write(`<li>${k}</li>`);
+    });
+
+    if (index == 1) {
+      document.write(`<li><a href="${offre.url}"
+</script>

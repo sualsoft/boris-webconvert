@@ -1,3 +1,39 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Australia's Best Dating Sites"
+
+[menu]
+[[menu.footer_left]]
+  name = '3 Best Dating Sites'
+  pageRef = '/'
+  weight = 1
+[[menu.footer_left]]
+  name = 'Dating Over 50'
+  pageRef = '/products'
+  weight = 2
+[[menu.footer_left]]
+  name = 'Best Dating Apps'
+  pageRef = '/services'
+  weight = 3
+
+
+[[menu.footer_right]]
+  name = 'Terms of use'
+  pageRef = '/terms'
+  weight = 1
+
+[[menu.footer_right]]
+  name = 'Privacy Policy'
+  pageRef = '/privacy'
+  weight = 2
+
+[Params]
+siteLogo = "/images/logo_fw.svg"
+footer = "On our website, we provide unbiased opinions on secure dating sites that guarantee the anonymity of users."
+
+
+
+enableGitInfo = true
+
+[frontmatter]
+lastmod = [':git', ':fileModTime']

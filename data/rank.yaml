@@ -1,0 +1,67 @@
+cards:
+  - logo: /images/cupid.svg
+    featured: true
+    number: 1
+    slogan:
+      title: Singles in your area!
+      icon: /images/binoculars.svg
+    content:
+      title: Good for flirting & serious relationships
+      lists:
+        - Easy registration & affordable prices
+        - Stay organized with My Favourites
+        - Range of useful features
+      links:
+        - text: Free and easy sign-up
+          link_mobi: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+          link_desktop: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+    button:
+      icon: /images/trophy.svg
+      score: 9.9
+      link_desktop: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+      link_mobi: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+
+  - logo: /images/be2.svg
+    featured: false
+    title: be2
+    number: 2
+    content:
+      title: Meet authentic people with serious intentions
+      lists:
+        - 24.000 new users sign in every day
+        - The app is modernized, sleek, and user-friendly
+    button:
+      icon: /images/speed.svg
+      score: 9.7
+      link_desktop: https://c.bst-offer.com/aff_c?offer_id=407&aff_id=1070&aff_sub=
+      link_mobi: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+
+  - logo: /images/seniorstodate.svg
+    featured: false
+    title: be2
+    number: 3
+    content:
+      title: Simple and easy to use
+      lists:
+        - No-commitment, 1 day at a time plans
+        - Easily block unwanted messages
+    button:
+      icon: /images/speed.svg
+      score: 9.5
+      link_desktop: https://c.bst-offer.com/aff_c?offer_id=407&aff_id=1070&aff_sub=
+      link_mobi: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=
+
+  - logo: /images/singles50.svg
+    featured: false
+    title: Single50
+    number: 4
+    content:
+      title: Senior dating for the young at heart
+      lists:
+        - A safe & secure dating site with SSL encryption
+        - Multiple plans to choose from
+    button:
+      icon: /images/speed.svg
+      score: 9.4
+      link_desktop: https://c.bst-offer.com/aff_c?offer_id=407&aff_id=1070&aff_sub=
+      link_mobi: https://c.bst-offer.com/aff_c?offer_id=955&aff_id=1070&aff_sub=

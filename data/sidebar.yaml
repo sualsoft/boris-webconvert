@@ -1,0 +1,15 @@
+qa:
+  - According to a study conducted by eHarmony, 22% of Australian singles have used online dating to find a partner.
+  - Over a quarter of online daters are interested in long-term relationships.
+  - Australia's largest online dating site, found that women are more likely to initiate contact with potential partners, with 79% of women sending the first message compared to 21% of men.
+
+credit: "Source : Statista "
+bottom:
+  title: Number of subscribers per site
+  creadit: "Source : Dating Sites"
+  content:
+    - name: eHarmony
+      count: 2.2+ Millions
+
+    - name: Zoosk
+      count: 2.1+ Millions

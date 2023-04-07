@@ -1,0 +1,328 @@
+{{ define "main"}}
+<!--================BANNER START================-->
+{{with .Params.banner}}
+<section class="banner">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-md-5">
+        <div class="left-banner">
+          <div class="h1-class">
+            <h1>{{.title}}</h1>
+            <h1 id="current-year"></h1>
+          </div>
+          <p>{{.content}}</p>
+          <span>
+            <img src="images/refresh.svg" alt="refersh-icon" />
+            Last Updated {{.Lastmod.Format "January 2006"}}
+            <a
+              href="javascript:void(0);"
+              data-toggle="popover"
+              data-placement="top"
+              data-content="The comparator does not reference all the sites present on the Australian market, but offers a list of sites with which the publisher is in contact. The publisher receives compensation from the sites, and depending on the partnerships established, the number and ranking of offers may be impacted. The Director of Publication can manually update the site and thus modify the ranking and sites presented.."
+            >
+              Advertising disclosure</a
+            ></span
+          >
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="right-banner">
+          <img src="/images/fond.png" alt="right banner" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+<!--================BANNER END================-->
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 left-panel">
+        <aside>
+          {{ range $.Site.Data.rank.cards }}
+          <!---->
+          {{if .featured}}
+          <div class="cards p-4 first">
+            <div class="row">
+              <div class="tag d-flex">
+                <span>{{.number}}</span>Best Portal
+                <div id="current-year1" class="mx-1"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-left">
+                  <div class="card-logo">
+                    <img
+                      src="{{.logo}}"
+                      alt="Cupid"
+                      class="img-fluid express-logo"
+                    />
+                    <div
+                      class="annoucement d-inline-block d-md-none off-in-mobile"
+                    >
+                      <a href="{{.link_desktop}}" target="_blank">
+                        3 Months Free</a
+                      >
+                    </div>
+                  </div>
+                  <div class="likes">
+                    {{with.slogan}}
+                    <img src="{{.icon}}" alt="{{.title}}" class="img-fluid" />
+                    <span>{{.title}}</span>
+                    {{end}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 d-left">
+                <div class="card-middle">
+                  {{with .content}}
+                  <h6 class="top">{{.title}}</h6>
+                  <ul class="feature-list mb-md-0">
+                    {{range.lists}}
+                    <li>{{.}}</li>
+                    {{end}}
+
+                    <!---->
+                    {{range.links}}
+                    <li>
+                      <a href="{{.link_mobi}}" target="_blank" class="d-md-none"
+                        ><strong> {{.text}}</strong></a
+                      >
+                      <!---->
+                      <a
+                        href="{{.link_mobi}}"
+                        target="_blank"
+                        class="d-none d-md-block"
+                        ><strong> {{.text}}</strong></a
+                      >
+                    </li>
+                    {{end}}
+                  </ul>
+                  {{end}}
+                </div>
+              </div>
+              <div class="col-md-3 d-center">
+                <div class="card-right">
+                  <div class="trophy">
+                    {{ with.button}}
+                    <span>
+                      <img src="{{.icon}}" alt="trophy" />
+                      {{.score}}</span
+                    >
+                  </div>
+                  <a
+                    href="{{.link_desktop}}"
+                    class="btn btn-visitor d-none d-md-block"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+                  <a
+                    href="{{.link_mobi}}"
+                    class="btn btn-visitor d-md-none"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+
+                  {{end}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{else}}
+          <!---->
+          <div class="cards p-4">
+            <div class="row">
+              <div class="tag no-bg"><span>{{.number}}</span></div>
+              <div class="col-md-3">
+                <div class="card-left">
+                  <div class="card-logo">
+                    <img
+                      src="{{.logo}}"
+                      alt="{{.title}}"
+                      class="img-fluid express-logo"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 d-left">
+                {{with .content}}
+                <div class="card-middle">
+                  <h6>{{.title}}</h6>
+                  <ul class="feature-list mb-md-0">
+                    {{ range.lists}}
+                    <li>{{.}}</li>
+                    {{end}}
+                  </ul>
+                </div>
+                {{end}}
+              </div>
+              <div class="col-md-3 d-center">
+                <div class="card-right">
+                  {{with .button}}
+                  <div class="trophy">
+                    <span>
+                      <img
+                        src="{{.icon}}"
+                        alt="trophy"
+                        class="score-icon"
+                      />{{.score}}</span
+                    >
+                  </div>
+                  <a
+                    href="{{.link_mobi}}"
+                    class="btn btn-visitor d-md-none"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+
+                  <a
+                    href="{{.link_desktop}}"
+                    class="btn btn-visitor d-none d-md-block"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+                  {{end}}
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---->
+          {{end}}
+          <!---->
+          {{end}}
+
+          <h2 class="main-heading">
+            <img src="/images/popular.png" alt="popular" />Best Portal of 2023
+          </h2>
+          {{ range $.Site.Data.rank.cards }}
+          <!---->
+          {{if .featured}}
+          <div class="cards p-4 first">
+            <div class="row">
+              <div class="tag d-flex">
+                <span>{{.number}}</span>Best Portal
+                <div id="current-year1" class="mx-1"></div>
+              </div>
+              <div class="col-md-3">
+                <div class="card-left">
+                  <div class="card-logo">
+                    <img
+                      src="{{.logo}}"
+                      alt="Cupid"
+                      class="img-fluid express-logo"
+                    />
+                    <div
+                      class="annoucement d-inline-block d-md-none off-in-mobile"
+                    >
+                      <a href="{{.link_desktop}}" target="_blank">
+                        3 Months Free</a
+                      >
+                    </div>
+                  </div>
+                  <div class="likes">
+                    {{with.slogan}}
+                    <img src="{{.icon}}" alt="{{.title}}" class="img-fluid" />
+                    <span>{{.title}}</span>
+                    {{end}}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 d-left">
+                <div class="card-middle">
+                  {{with .content}}
+                  <h6 class="top">{{.title}}</h6>
+                  <ul class="feature-list mb-md-0">
+                    {{range.lists}}
+                    <li>{{.}}</li>
+                    {{end}}
+
+                    <!---->
+                    {{range.links}}
+                    <li>
+                      <a href="{{.link_mobi}}" target="_blank" class="d-md-none"
+                        ><strong> {{.text}}</strong></a
+                      >
+                      <!---->
+                      <a
+                        href="{{.link_mobi}}"
+                        target="_blank"
+                        class="d-none d-md-block"
+                        ><strong> {{.text}}</strong></a
+                      >
+                    </li>
+                    {{end}}
+                  </ul>
+                  {{end}}
+                </div>
+              </div>
+              <div class="col-md-3 d-center">
+                <div class="card-right">
+                  <div class="trophy">
+                    {{ with.button}}
+                    <span>
+                      <img src="{{.icon}}" alt="trophy" />
+                      {{.score}}</span
+                    >
+                  </div>
+                  <a
+                    href="{{.link_desktop}}"
+                    class="btn btn-visitor d-none d-md-block"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+                  <a
+                    href="{{.link_mobi}}"
+                    class="btn btn-visitor d-md-none"
+                    target="_blank"
+                    >Visit Site</a
+                  >
+
+                  {{end}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{end}}
+          <!---->
+          {{end}}
+        </aside>
+      </div>
+      <div class="col-lg-3">
+        <div class="rightside-banner">{{partial "sidebar.html" .}}</div>
+      </div>
+
+      <div class="col-lg-9 left-panel">
+        <div class="main-content pr-md-3">{{.Content}}</div>
+        <div class="card-one">
+          <div class="row">
+            {{with .Params.front_card}}
+            <div class="col-md-5">
+              <div class="cardOne-img">
+                <img src="{{.image}}" alt="vpn" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="cardOne-content">
+                <h4>{{.name}} ⭐⭐⭐⭐⭐</h4>
+                <p>{{.content | safeHTML}}</p>
+                <a
+                  href="{{.button_link}}"
+                  target="_blank"
+                  class="btn btn-bordered"
+                >
+                  Try it out here!
+                </a>
+              </div>
+            </div>
+            {{end}}
+          </div>
+        </div>
+
+        <!--===============LEFT-SIDEBAR===========-->
+      </div>
+
+      <!--==========Col-md-9 end-->
+    </div>
+  </div>
+</div>
+{{end}}
